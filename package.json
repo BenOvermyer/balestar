@@ -1,0 +1,35 @@
+{
+  "name": "balestar",
+  "version": "1.0.0",
+  "description": "A site for discovering tabletop role-playing games",
+  "main": "src/index.js",
+  "scripts": {
+    "sass": "npx sass scss/main.scss public/main.css",
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenOvermyer/balestar.git"
+  },
+  "keywords": [
+    "ttrpg"
+  ],
+  "author": "Ben Overmyer <ben@overmyer.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenOvermyer/balestar/issues"
+  },
+  "homepage": "https://github.com/BenOvermyer/balestar#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "sequelize": "^6.27.0",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "sass": "^1.56.2",
+    "sequelize-cli": "^6.5.2"
+  }
+}

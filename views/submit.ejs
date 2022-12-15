@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Add System | Balestar RPG Index</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <%- include('header') %>
+  <h1>Add a System</h1>
+
+  <p>Submit the form to add a new system.</p>
+
+  <section>
+    <form action="/submit" method="POST">
+      <div class="input">
+        <div class="meta">
+          <label for="name">Name</label>
+          <p>Enter the title of the system.</p>
+        </div>
+          <input type="text" name="name" id="name"/>
+      </div>
+
+      <div class="input">
+        <div class="meta">
+          <label for="description">Description</label>
+          <p>Enter a brief description.</p>
+        </div>
+          <textarea name="description" id="description"></textarea>
+      </div>
+
+      <div class="input">
+        <div class="meta">
+          <label for="author">Author</label>
+          <p>Separate multiple authors with a comma (,).</p>
+        </div>
+          <input type="text" name="author" id="author"/>
+      </div>
+
+      <div class="input">
+        <div class="meta">
+          <label for="publisher">Publisher</label>
+          <p>Enter the primary publisher.</p>
+        </div>
+          <input type="text" name="publisher" id="publisher"/>
+      </div>
+
+      <div class="input">
+        <div class="meta">
+          <label for="genre">Genre</label>
+          <p>Separate multiple genres by a comma (,).</p>
+        </div>
+          <input type="text" name="genre" id="genre"/>
+      </div>
+
+      <div class="input">
+        <div class="meta">
+          <label for="mechanics">Mechanics</label>
+          <p>Separate each mechanic with a new line.</p>
+        </div>
+        <textarea name="mechanics" id="mechanics"></textarea>
+      </div>
+
+      <input type="submit" value="Submit"/>
+    </form>
+  </section>
+
+  <%- include('footer') %>
+</body>
+</html>

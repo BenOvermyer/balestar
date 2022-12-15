@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Search | Balestar RPG Index</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <%- include('header') %>
+  <h1>Balestar RPG Index</h1>
+
+  <p>This site is a way for you to discover new tabletop role-playing games, and to help others do the same.</p>
+
+  <p>Note, that this is a very early prototype. All the data will live on in future versions, but the site will probably look and feel very different in the future.</p>
+
+  <form action="/search" method="POST">
+
+    <div class="input">
+      <div class="meta">
+        <label for="search">Search</label>
+      </div>
+      <div class="field">
+        <input type="text" name="search" id="search"/>
+      </div>
+    </div>
+
+    <div class="input">
+      <div class="meta">
+        <label for="context">Context</label>
+      </div>
+      <div class="field">
+        <select name="context">
+          <option>name</option>
+          <option>mechanic</option>
+          <option>genre</option>
+          <option>author</option>
+          <option>publisher</option>
+        </select>
+      </div>
+    </div>
+
+    <input type="submit" value="Search"/>
+  </form>
+
+  <section class="results">
+    <% if (results.length == 0) { %>
+      <p>No results.</p>
+    <% } else { %>
+
+    <% results.forEach(function(system){ %>
+      <div class="result">
+        <h2><%= system.name %></h2>
+        <p><%= system.description %></p>
+        <p><strong>Author:</strong> <%= system.author %></p>
+        <p><strong>Publisher:</strong> <%= system.publisher %></p>
+        <p><strong>Genre:</strong> <%= system.genre %></p>
+        <p><strong>Mechanics:</strong> <%= system.mechanics %></p>
+      </div>
+    <% }) %>
+    <% } %>
+  </section>
+
+  <%- include('footer') %>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "development": {
+    "storage": "./balestar.sqlite3",
+    "dialect": "sqlite"
+  },
+  "test": {
+    "storage": ":memory",
+    "dialect": "sqlite"
+  },
+  "production": {
+    "storage": "./balestar.sqlite3",
+    "dialect": "sqlite"
+  }
+}
