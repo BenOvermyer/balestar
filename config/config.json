@@ -8,7 +8,7 @@
     "dialect": "sqlite"
   },
   "production": {
-    "storage": "./balestar.sqlite3",
+    "storage": "./data/balestar.sqlite3",
     "dialect": "sqlite"
   }
 }
