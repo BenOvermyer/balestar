@@ -57,7 +57,7 @@
         <p><strong>Author:</strong> <%= system.author %></p>
         <p><strong>Publisher:</strong> <%= system.publisher %></p>
         <p><strong>Genre:</strong> <%= system.genre %></p>
-        <p><strong>Mechanics:</strong> <%= system.mechanics %></p>
+        <p><strong>Mechanics:</strong> <%= system.mechanics.replaceAll('\r\n', ', ') %></p>
       </div>
     <% }) %>
     <% } %>
